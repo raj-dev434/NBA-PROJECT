@@ -1,0 +1,23 @@
+{
+  "name": "badminton-court-website",
+  "version": "1.0.0",
+  "description": "A website for the Nellai Badminton Academy, providing information about the academy, booking options, and contact details.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'Test step not defined'"
+  },
+  "keywords": [
+    "badminton",
+    "academy",
+    "sports",
+    "website"
+  ],
+  "author": "Nellai Badminton Academy",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
