@@ -1,0 +1,440 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+  --primary-color: #03045e;
+  --secondary-color: #0077b6;
+  --accent-color: #00b4d8;
+  --background-color: #f4f6f8;
+  --text-color: #333;
+  --white: #fff;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.5rem;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  position: relative;
+  background: var(--background-color); /* Fallback */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('assets/images/court.jpg') center/cover no-repeat;
+  opacity: 0.3; /* Transparency for readability */
+  z-index: -1;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 123, 182, 0.2); /* Subtle blue tint for colorfulness */
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  color: var(--white);
+  z-index: 1000;
+  padding: var(--spacing-md) var(--spacing-lg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  max-height: 60px;
+  width: auto;
+}
+
+.header-text {
+  text-align: center;
+}
+
+header h1 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+header p {
+  font-size: var(--font-size-lg);
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--primary-color);
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--secondary-color);
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+nav a[aria-current="page"] {
+  background-color: var(--accent-color);
+}
+
+/* Button Styles */
+.btn, #learnMore, #bookNow, #submitBooking {
+  display: inline-block !important;
+  background-color: var(--accent-color) !important;
+  color: var(--white) !important;
+  border: none !important;
+  padding: 0.75rem 1.5rem !important;
+  font-size: var(--font-size-base) !important;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  border-radius: 30px !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.btn:hover, .btn:focus,
+#learnMore:hover, #learnMore:focus,
+#bookNow:hover, #bookNow:focus,
+#submitBooking:hover, #submitBooking:focus {
+  background-color: var(--secondary-color) !important;
+  outline: 2px solid var(--secondary-color) !important;
+  outline-offset: 2px !important;
+}
+
+#hero #learnMore {
+  background-color: var(--accent-color) !important;
+  font-size: var(--font-size-lg) !important;
+  padding: 0.8rem 2rem !important;
+}
+
+#booking #bookNow, #call-to-action #bookNow, #booking #submitBooking {
+  background-color: var(--primary-color) !important;
+  font-size: var(--font-size-base) !important;
+}
+
+/* Hero Section */
+#hero {
+  background: url('assets/images/total-img.jpeg') center/cover no-repeat;
+  position: relative;
+  color: var(--white);
+  padding: 4rem var(--spacing-lg);
+  isolation: isolate;
+  text-align: center;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#hero .content {
+  position: relative;
+}
+
+#hero h2 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--spacing-md);
+}
+
+#hero p {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+/* General Sections */
+section {
+  padding: 3rem var(--spacing-lg);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
+  border-radius: 8px;
+  margin: var(--spacing-md);
+}
+
+section h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-color);
+}
+
+section p {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0;
+}
+
+section li {
+  font-size: var(--font-size-lg);
+  margin: var(--spacing-sm) 0;
+}
+
+/* Pricing Section */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.pricing-box {
+  background: var(--white);
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--accent-color);
+}
+
+.pricing-box h3 {
+  font-size: var(--font-size-lg);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.pricing-box .price {
+  font-size: var(--font-size-xl);
+  color: var(--secondary-color);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.pricing-box p {
+  font-size: var(--font-size-base);
+}
+
+/* Form Styles */
+#booking-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: var(--font-size-base);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.form-group input,
+.form-group select {
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-base);
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: 2px solid var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Section and Facility Images */
+.section-image, .facility-image {
+  max-width: 100%;
+  height: auto;
+  margin: var(--spacing-md) auto;
+  border-radius: 8px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Coach Grid */
+.coach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.coach {
+  background: var(--white);
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.coach h3 {
+  font-size: var(--font-size-lg);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.coach p {
+  font-size: var(--font-size-base);
+}
+
+/* Contact Info */
+#contact p {
+  font-size: var(--font-size-base);
+  margin: var(--spacing-sm) 0;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: var(--spacing-md);
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .logo {
+    max-height: 50px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  #hero {
+    padding: 2rem var(--spacing-md);
+  }
+
+  #hero h2 {
+    font-size: 1.8rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin: var(--spacing-sm);
+  }
+
+  .btn, #learnMore, #bookNow, #submitBooking {
+    font-size: 0.9rem !important;
+    padding: 0.6rem 1.2rem !important;
+  }
+
+  #hero #learnMore {
+    font-size: 1rem !important;
+    padding: 0.7rem 1.5rem !important;
+  }
+
+  .section-image, .facility-image {
+    max-height: 200px;
+  }
+
+  .coach-grid, .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .logo {
+    max-height: 40px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  #hero {
+    padding: 1.5rem var(--spacing-sm);
+  }
+
+  #hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn, #learnMore, #bookNow, #submitBooking {
+    font-size: 0.8rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  #hero #learnMore {
+    font-size: 0.9rem !important;
+    padding: 0.6rem 1.2rem !important;
+  }
+
+  .section-image, .facility-image {
+    max-height: 150px;
+  }
+}

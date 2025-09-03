@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book a badminton court or coaching session at Nellai Badminton Academy in Nellai, Tamil Nadu." />
+  <meta name="keywords" content="badminton, academy, Nellai, Tamil Nadu, booking, court reservation, coaching, membership" />
+  <meta name="author" content="Nellai Badminton Academy" />
+  <title>Book a Court - Nellai Badminton Academy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <header role="banner">
+    <div class="header-content">
+      <img src="assets/images/logo.png" alt="Nellai Badminton Academy Logo" class="logo" />
+      <div class="header-text">
+        <h1>Nellai Badminton Academy</h1>
+        <p>Where every shot counts!</p>
+      </div>
+    </div>
+  </header>
+
+  <nav role="navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="booking.html" aria-current="page">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="pricing" aria-labelledby="pricing-heading">
+      <div class="content">
+        <h2 id="pricing-heading">Pricing Details</h2>
+        <p>Choose between our coaching sessions or membership for court access!</p>
+        <div class="pricing-grid">
+          <div class="pricing-box">
+            <h3>Coaching</h3>
+            <p class="price">₹1500</p>
+            <p><strong>Timing:</strong> Evening 6:00 PM - 7:30 PM</p>
+            <p>Perfect for players seeking expert guidance to improve their skills.</p>
+          </div>
+          <div class="pricing-box">
+            <h3>Membership</h3>
+            <p class="price">₹1200</p>
+            <p><strong>Timings:</strong> Morning 6:00 AM - 7:00 AM, 7:00 AM - 8:00 AM, Night 7:00 PM - 9:00 PM</p>
+            <p>Enjoy flexible court access for practice and matches.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" aria-labelledby="booking-heading">
+      <div class="content">
+        <h2 id="booking-heading">Book a Court or Coaching</h2>
+        <p>Reserve your slot for practice, matches, or coaching. Fill out the form below!</p>
+        <img src="assets/images/booking.jpg" alt="Badminton court booking process" class="section-image" />
+        <form id="booking-form" aria-label="Court or coaching booking form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your full name" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="Enter your phone number (e.g., 9876543210)" pattern="[6-9][0-9]{9}" />
+          </div>
+          <div class="form-group">
+            <label for="type">Booking Type</label>
+            <select id="type" name="type" required aria-required="true">
+              <option value="" disabled selected>Select booking type</option>
+              <option value="coaching">Coaching (₹1500)</option>
+              <option value="membership">Membership (₹1200)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Booking Date</label>
+            <input type="date" id="date" name="date" required aria-required="true" />
+          </div>
+          <div class="form-group">
+            <label for="time">Time Slot</label>
+            <select id="time" name="time" required aria-required="true">
+              <option value="" disabled selected>Select a time slot</option>
+              <option value="06:00-07:00">6:00 AM - 7:00 AM (Membership)</option>
+              <option value="07:00-08:00">7:00 AM - 8:00 AM (Membership)</option>
+              <option value="18:00-19:30">6:00 PM - 7:30 PM (Coaching)</option>
+              <option value="19:00-20:00">7:00 PM - 8:00 PM (Membership)</option>
+              <option value="20:00-21:00">8:00 PM - 9:00 PM (Membership)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="court">Court Number</label>
+            <select id="court" name="court" required aria-required="true">
+              <option value="" disabled selected>Select a court</option>
+              <option value="court-1">Court 1</option>
+              <option value="court-2">Court 2</option>
+              <option value="court-3">Court 3</option>
+            </select>
+          </div>
+          <button type="submit" class="btn" id="submitBooking" aria-label="Submit court or coaching booking">Submit Booking</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nellai Badminton Academy. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
