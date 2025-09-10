@@ -15,6 +15,7 @@ badminton-court-website
 ├── package.json         # Configuration file for npm
 └── README.md            # Documentation for the project
 ```
+due to deployement issue i flatted the file structure
 
 ## Installation
 
